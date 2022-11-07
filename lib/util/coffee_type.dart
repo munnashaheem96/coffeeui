@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class CoffeeType extends StatelessWidget {
@@ -10,8 +12,15 @@ class CoffeeType extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      'Cappucino',
+    return Padding(
+      padding: const EdgeInsets.only(left: 25),
+      child: Text(
+        coffeeType,
+        style: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
     );
   }
 }

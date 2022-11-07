@@ -83,6 +83,10 @@ class _HomePageState extends State<HomePage> {
               children: [
                 CoffeeType(
                   coffeeType: 'Cappucino'),
+              CoffeeType(
+                  coffeeType: 'Latte'),
+              CoffeeType(
+                  coffeeType: 'Black'),
               ],
             ),
           ),
