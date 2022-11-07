@@ -73,6 +73,20 @@ class _HomePageState extends State<HomePage> {
           ),
 
           SizedBox(height: 25.0),
+
+          //horizontal list view of coffee types
+          Container(
+            height: 50,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Text('Cuppucino'),
+                Text('Cuppucino'),
+                Text('Cuppucino'),
+                Text('Cuppucino'),
+              ],
+            ),
+          ),
           
           //horizontal list view of coffe tile
           Expanded(
