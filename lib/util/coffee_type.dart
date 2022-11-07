@@ -6,22 +6,27 @@ class CoffeeType extends StatelessWidget {
   // ignore: non_constant_identifier_names
   final String coffeeType;
   final bool isSelected;
+  final VoidCallback onTap;
 
   CoffeeType({
     required this.coffeeType,
     required this.isSelected,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 25),
-      child: Text(
-        coffeeType,
-        style: TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.bold,
-          color: isSelected ? Colors.orange : Colors.white,
+    return GestureDetector(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 25),
+        child: Text(
+          coffeeType,
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: isSelected ? Colors.orange : Colors.white,
+          ),
         ),
       ),
     );
